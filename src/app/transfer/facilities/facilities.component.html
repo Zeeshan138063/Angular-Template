@@ -1,0 +1,94 @@
+<!--Extended Table starts-->
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">Extended Tables</div>
+    <p class="content-sub-header">Tables with some actions and with more feathers.</p>
+  </div>
+</div>
+<section id="extended">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Action Buttons</h4>
+        </div>
+        <div class="card-body">
+          <div class="card-block">
+            <table class="table table-responsive-md text-center">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Is Active</th>
+                  <th>Action</th>
+              
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr  *ngFor="let fici of facilitiesModel">
+                  <td>{{fici.name}}</td>
+                  <td>{{fici.description}}</td>
+                  <td>{{fici.isActive}}</td>
+                 
+                  <td>
+                    <a class="info p-0" (click)="DeleteData(fici.id)" data-original-title="" title="">
+                      <i class="ft-user font-medium-3 mr-2"></i>
+                    </a>
+                    <a class="success p-0" data-original-title="" title="">
+                      <i class="ft-edit-2 font-medium-3 mr-2"></i>
+                    </a>
+                    <a class="danger p-0" data-original-title="" title="">
+                      <i class="ft-x font-medium-3 mr-2"></i>
+                    </a>
+                  </td>
+                </tr>
+              
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="px-3">
+          <form class="form"  >
+            <div class="form-body">
+              <h4 class="form-section"><i class="ft-user"></i> Personal Info</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput1">Name </label>
+                    <input type="text" id="projectinput1" placeholder="Enter Your Name" class="form-control" name="name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="projectinput2">Description</label>
+                    <input type="text" id="projectinput2" class="form-control" name="Description">
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
+                <i class="ft-x"></i> Cancel
+              </button>
+              <button type="button" class="btn btn-raised btn-raised btn-primary">
+                <i class="fa fa-check-square-o" ></i> Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!--Extended Table Ends-->
+<!--Shopping cart starts-->
+
+<!--Shopping cart ends-->
